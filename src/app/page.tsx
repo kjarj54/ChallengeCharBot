@@ -1,10 +1,10 @@
-import ChatBot from "@/components/chat";
+import Dashboard from "@/components/dashboard";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-      <ChatBot/>
+      <Dashboard/>
     </>
   );
 }
