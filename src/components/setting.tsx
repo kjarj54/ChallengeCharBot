@@ -7,7 +7,7 @@ const Setting: React.FC<SettingsProps> = ({closeSettings}) => {
           initial={{ y: "100%" }}
           animate={{ y: 0 }}
           exit={{ y: "100%" }}
-          className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-gray-300 z-50"
+          className="fixed bottom-0 right-0 w-150 h-3/4 p-4 bg-white border-t border-gray-300 z-50 flex flex-col"
         >
           <button
             onClick={closeSettings}
