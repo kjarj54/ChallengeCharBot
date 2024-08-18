@@ -1,0 +1,6 @@
+{
+    "responses": [
+      { "token": "hola", "response": "En que te puedo ayudar?" },
+      { "token": "mundo", "response": "The world is beautiful." }
+    ]
+  }
