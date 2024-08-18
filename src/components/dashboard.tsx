@@ -12,11 +12,22 @@ const Dashboard: React.FC = () => {
   const [isChatOpen, setIsChatOpen] = useState<boolean>(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState<boolean>(false);
 
-  const handleSendMessage = (e: React.FormEvent) => {
+  const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
     if (input.trim()) {
-      setMessages([...messages, input]);
+      const userMessage = input;
+      setMessages([...messages, userMessage]);
       setInput("");
+
+      try {
+        const response = await fetch('/api/bot?sentence='+ encodeURIComponent(userMessage));
+        const data = await response.json();
+        if(data.messages){
+          setMessages((prevMessages)=> [...prevMessages, ...data.messages]);
+        }
+      } catch (error) {
+        console.error("Error fetching bot response",error);
+      }
     }
   };
 
