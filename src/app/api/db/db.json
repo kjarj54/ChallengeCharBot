@@ -1,6 +1,14 @@
 {
     "responses": [
-      { "token": "hola", "response": "En que te puedo ayudar?" },
-      { "token": "mundo", "response": "The world is beautiful." }
+        { "token": "hola", "response": "En que te puedo ayudar?" },
+        { "token": "adios", "response": "Hasta luego, que tengas un buen día." },
+        { "token": "gracias", "response": "De nada, ¿hay algo más en lo que pueda ayudarte?" },
+        { "token": "horario", "response": "Nuestro horario de atención es de 9 AM a 6 PM de lunes a viernes." },
+        { "token": "contacto", "response": "Puedes contactarnos al correo soporte@ejemplo.com o al teléfono 123-456-7890." },
+        { "token": "ubicacion", "response": "Estamos ubicados en la calle Principal 123, Ciudad, País." },
+        { "token": "precio", "response": "Nuestros precios varían según el producto. ¿Hay algún producto específico que te interese?" },
+        { "token": "envio", "response": "Ofrecemos envíos a nivel nacional e internacional. Los costos dependen de la ubicación." },
+        { "token": "devolucion", "response": "Puedes devolver los productos dentro de los 30 días posteriores a la compra." },
+        { "token": "soporte", "response": "Nuestro equipo de soporte está disponible 24/7 para ayudarte con cualquier problema técnico." }
     ]
-  }
+}
