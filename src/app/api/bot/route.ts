@@ -49,10 +49,10 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const sentence = body.sentence;
+    const response = body.sentence;
     const token = body.token;
 
-    if (!sentence || !token) {
+    if (!response || !token) {
       return NextResponse.json({ error: 'Sentence and token are required' }, { status: 400 });
     }
 
@@ -64,10 +64,10 @@ export async function POST(request: NextRequest) {
 
     if (existingEntryIndex !== -1) {
       // Actualizar la entrada existente
-      db.responses[existingEntryIndex].sentence = sentence;
+      db.responses[existingEntryIndex].response= response;
     } else {
       // Agregar una nueva entrada
-      db.responses.push({ token, sentence });
+      db.responses.push({ token, response });
     }
 
     // Guardar el archivo db.json actualizado
